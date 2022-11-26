@@ -98,15 +98,19 @@ const DegreeOfRelationCard = () => {
             />
           </Stack>
 
-          {personOne === personTwo && (
-            <Typography
-              variant="body2"
-              color="red"
-              sx={{ fontSize: ".85rem", fontWeight: 600 }}
-            >
-              Selected same person
-            </Typography>
-          )}
+          {personOne !== undefined &&
+            personTwo !== undefined &&
+            personOne !== null &&
+            personTwo !== null &&
+            personOne === personTwo && (
+              <Typography
+                variant="body2"
+                color="red"
+                sx={{ fontSize: ".85rem", fontWeight: 600 }}
+              >
+                Selected same person
+              </Typography>
+            )}
 
           {
             <Button
@@ -126,7 +130,7 @@ const DegreeOfRelationCard = () => {
               }}
               onClick={searchRelationShipHandler}
             >
-              ADD
+              Search
             </Button>
           }
         </Stack>
